@@ -33,6 +33,12 @@
                 ToDo一覧
               </div>
               <div class="list-group list-group-flush">
+                @foreach ($todos as $todo)
+                <!-- Collectionインスタンス内のTodoインスタンスを1つずつ取り出す -->
+                  <div class="d-flex align-items-center p-2">
+                    <span class="col-9">{{ $todo->content }}</span>
+                  </div>
+                @endforeach
               </div>
             </div>
           </div>
