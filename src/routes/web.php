@@ -15,5 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/todo', 'TodoController@index');
-Route::get('/todo/create', 'TodoController@create')->name('todo.create');
+Route::get('/todo', 'TodoController@index')->name('todo.index'); // 一覧画面
+Route::get('/todo/create', 'TodoController@create')->name('todo.create'); // 新規作成画面へ
+Route::post('/todo', 'TodoController@store')->name('todo.store'); // 新規作成処理へ
