@@ -14,4 +14,9 @@ class TodoController extends Controller
         
         return view('todo.index', ['todos' => $todos]); // Viewとして表示するファイルを指定
     }
+
+    public function create()
+    {
+        return view('todo.create');
+    }
 }
