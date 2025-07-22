@@ -12,6 +12,6 @@ class TodoController extends Controller
         $todo = new Todo(); // Modelクラスのインスタンス化
         $todos = $todo->all(); // todosテーブル全件取得(連想配列)
         
-        return view('todo.index'); // Viewとして表示するファイルを指定
+        return view('todo.index', ['todos' => $todos]); // Viewとして表示するファイルを指定
     }
 }
