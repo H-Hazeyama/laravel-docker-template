@@ -29,4 +29,10 @@ class TodoController extends Controller
 
         return redirect()->route('todo.index');
     }
+        
+    public function show($id) // 詳細画面
+    {
+        $model = new Todo();
+        $todo = $model->find($id);
+    }
 }
