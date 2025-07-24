@@ -29,7 +29,7 @@ class TodoController extends Controller
     public function store(Request $request) // 新規作成ボタン押下時
     {
         $inputs = $request->all();
-        
+
         $this->todo->fill($inputs);
         $this->todo->save();
 
@@ -41,5 +41,11 @@ class TodoController extends Controller
         $todo = $this->todo->find($id);
 
         return view('todo.show', ['todo' => $todo]);
+    }
+
+    public function edit($id)
+    {
+        $todo = $this->todo->find($id);
+        dd($todo);
     }
 }
