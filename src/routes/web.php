@@ -20,3 +20,4 @@ Route::get('/todo/create', 'TodoController@create')->name('todo.create'); // 新
 Route::post('/todo', 'TodoController@store')->name('todo.store'); // 新規作成処理へ
 Route::get('/todo/{id}', 'TodoController@show')->name('todo.show'); // 詳細画面
 Route::get('/todo/{id}/edit', 'TodoController@edit')->name('todo.edit'); // 編集処理へ
+Route::put('/todo/{id}', 'TodoController@update')->name('todo.update'); // 更新処理へ
