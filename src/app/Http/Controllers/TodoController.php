@@ -7,10 +7,13 @@ use App\Todo;
 
 class TodoController extends Controller
 {
+    private $todo;
+
      public function __construct(Todo $todo)
     {
+        $this->todo = $todo;
     }
-    
+
     public function index() // 一覧画面
     {
         $todo = new Todo();
