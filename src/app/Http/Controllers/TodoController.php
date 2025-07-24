@@ -34,5 +34,7 @@ class TodoController extends Controller
     {
         $model = new Todo();
         $todo = $model->find($id);
+
+        return view('todo.show', ['todo' => $todo]);
     }
 }
