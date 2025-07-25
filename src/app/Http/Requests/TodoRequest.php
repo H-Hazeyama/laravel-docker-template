@@ -27,4 +27,6 @@ class TodoRequest extends FormRequest
             'content' => 'required|max:255',
         ];
     }
+
+    
 }
