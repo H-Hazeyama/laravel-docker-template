@@ -21,3 +21,4 @@ Route::post('/todo', 'TodoController@store')->name('todo.store'); // 新規作�
 Route::get('/todo/{id}', 'TodoController@show')->name('todo.show'); // 詳細画面
 Route::get('/todo/{id}/edit', 'TodoController@edit')->name('todo.edit'); // 編集処理へ
 Route::put('/todo/{id}', 'TodoController@update')->name('todo.update'); // 更新処理へ
+Route::delete('/todo/{id}', 'TodoController@delete')->name('todo.delete'); // 削除処理へ

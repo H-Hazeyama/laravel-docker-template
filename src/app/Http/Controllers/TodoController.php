@@ -57,4 +57,9 @@ class TodoController extends Controller
         $todo->fill($inputs)->save();
         return redirect()->route('todo.show', $todo->id);
     }
+
+    public function delete()
+    {
+        dd('削除のルート実行！');
+    }
 }
